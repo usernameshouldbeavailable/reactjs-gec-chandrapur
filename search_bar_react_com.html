@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+<body>
+
+  <div id="search"></div>
+
+  <script type="text/babel">
+    function SearchBar() {
+      return <div>
+          <form action="">
+              <input type="text" placeholder="Search..." />
+              <button>Search</button>
+              <p>Search now...</p>
+          </form>
+        </div>;
+    }
+    function ProductSearch() {
+      return <div>
+          <h1>Search for your Favourite Products</h1>
+          <SearchBar />
+        </div>;
+    }
+
+    ReactDOM.render(<ProductSearch />, document.getElementById('search'))
+  </script>
+
+</body>
+
+</html>
