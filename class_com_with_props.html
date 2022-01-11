@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    class Image extends React.Component {
+
+        render() {
+
+            return <img src="https://via.placeholder.com/150" />;
+
+        }
+
+    }
+    
+    class Profile extends React.Component {
+
+        render() {
+
+            return <div>   
+                <Image />
+                <h1>{ this.props.personName } is learning react js</h1>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Github</a></li>
+                    <li><a href="">Linkedin</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
+                <button>Contact Me!</button>
+            </div>;
+
+        }
+
+    }
+
+    ReactDOM.render(<Profile personName="Avinash Seth"/>, document.getElementById('root'))
+  </script>
+
+</body>
+
+</html>
