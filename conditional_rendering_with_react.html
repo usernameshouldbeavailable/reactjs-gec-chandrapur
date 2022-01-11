@@ -28,7 +28,7 @@
         render() {
 
             return <div> 
-                    <h3>Hey, Avinash</h3>
+                    <h3>Hey, {this.props.personName}</h3>
                     <ul>
                         <li><a href="">View Profile</a></li>
                         <li><a href="">Reset Password</a></li>
@@ -45,7 +45,7 @@
 
             if(this.props.loggedin == 1)
             {
-                return <ProfileLinks />
+                return <ProfileLinks personName={this.props.personName}/>
             }
             else
             {
@@ -62,8 +62,8 @@
 
     }
 
-    ReactDOM.render(<Menu loggedin="1"/>, document.getElementById('root'))
-    
+    ReactDOM.render(<Menu loggedin="1" personName="Avinash"/>, document.getElementById('root'))
+
   </script>
 
 </body>
