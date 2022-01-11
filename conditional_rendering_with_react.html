@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    class LoginButton extends React.Component {
+
+        render() {
+
+            return <div> 
+                    <button>Sign In</button>
+                </div>
+        }
+
+    }
+
+    class ProfileLinks extends React.Component {
+
+        render() {
+
+            return <div> 
+                    <h3>Hey, Avinash</h3>
+                    <ul>
+                        <li><a href="">View Profile</a></li>
+                        <li><a href="">Reset Password</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+        }
+
+    }
+    
+    class Menu extends React.Component {
+
+        showMenuOrLoginButton() {
+
+            if(this.props.loggedin == 1)
+            {
+                return <ProfileLinks />
+            }
+            else
+            {
+                return <LoginButton />
+            }
+
+        }
+
+        render() {
+
+            return <div>{this.showMenuOrLoginButton()}</div>;
+
+        }
+
+    }
+
+    ReactDOM.render(<Menu loggedin="1"/>, document.getElementById('root'))
+    
+  </script>
+
+</body>
+
+</html>
