@@ -14,19 +14,26 @@
     
     function Item(props) {
         return (
-            <li>{ props.listItem }</li>
+            <li><input type="checkbox" name="myTodo" value={props.todoId} /> { props.listItem }</li>
         )
     }
 
     function ShoppingList() {
 
-        const todos = ["Learn Reactjs", "Learn Monogodb", "Learn Nodejs", "Become MERN Stack Developer"];
+        // const todos = ["Learn Reactjs", "Learn Monogodb", "Learn Nodejs", "Become MERN Stack Developer"];
+
+        const todos = [
+            {todoId: 1, todoItem: "Learn Reactjs"},
+            {todoId: 2, todoItem: "Learn Monogodb"},
+            {todoId: 3, todoItem: "Learn Nodejs"},
+            {todoId: 4, todoItem: "Become MERN Stack Developer"},
+        ];
         
         return (
             <div>
                 <h1>Hey, I'm Avinash Seth, this is my 2022 learning list</h1>
                 <ul>
-                    { todos.map((todo) => <Item listItem={todo} />) }
+                    { todos.map((todo) => <Item listItem={ todo.todoItem } todoId={ todo.todoId } />) }
                 </ul>
             </div>
         );
