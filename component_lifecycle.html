@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    
+    class Avinash extends React.Component {
+
+        componentDidMount() {
+
+            console.log("Component Did Mount");
+
+        }
+
+        render() {
+            console.log("Component is now visible to user");
+            return <h1>React Componet Lifecycle</h1>;
+        }
+
+        constructor() {
+
+            super();
+
+            console.log("This is consturctor function");
+
+        }
+
+        componentDidUpdate() {
+
+            console.log("Component Did Update");
+
+        }
+
+        componentWillUnmount() {
+
+            console.log("Component Will Unmount");
+
+        }
+
+    }
+
+
+    ReactDOM.render(<Avinash />, document.getElementById('root'))
+  </script>
+
+</body>
+
+</html>
