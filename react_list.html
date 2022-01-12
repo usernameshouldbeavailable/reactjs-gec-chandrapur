@@ -30,6 +30,12 @@
 
         // const todos = ["Learn Reactjs", "Learn Monogodb", "Learn Nodejs", "Become MERN Stack Developer"];
 
+        const myStyle = {
+            border: "15px solid black",
+            padding: "10px",
+            backgroundColor: "green"
+        };
+
         const todos = [
             {todoId: 1, todoItem: "Learn Reactjs"},
             {todoId: 2, todoItem: "Learn Monogodb"},
@@ -40,7 +46,7 @@
         return (
             <div>
                 <h1>Hey, I'm Avinash Seth, this is my 2022 learning list</h1>
-                <ul>
+                <ul style={myStyle}>
                     { todos.map((todo) => <Item listItem={ todo.todoItem } todoId={ todo.todoId } />) }
                 </ul>
             </div>
