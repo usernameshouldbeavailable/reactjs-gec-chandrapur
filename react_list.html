@@ -13,8 +13,16 @@
   <script type="text/babel">
     
     function Item(props) {
+
+        function checkOrUncheckCurrentItem(todoItem) {
+
+            alert('You clicked on ' + todoItem);
+
+        }
+
+
         return (
-            <li><input type="checkbox" name="myTodo" value={props.todoId} /> { props.listItem }</li>
+            <li><input type="checkbox" name="myTodo" onClick={ () => checkOrUncheckCurrentItem(props.listItem) } value={props.todoId} /> { props.listItem }</li>
         )
     }
 
