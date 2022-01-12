@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
 
 <body>
 
@@ -22,7 +22,7 @@
 
 
         return (
-            <li><input type="checkbox" name="myTodo" onClick={ () => checkOrUncheckCurrentItem(props.listItem) } value={props.todoId} /> { props.listItem }</li>
+            <li style={{ backgroundColor: 'red', color: 'white' }}><input type="checkbox" name="myTodo" onClick={ () => checkOrUncheckCurrentItem(props.listItem) } value={props.todoId} /> { props.listItem }</li>
         )
     }
 
